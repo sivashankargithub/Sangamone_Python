@@ -1,0 +1,6 @@
+15-Aug-2023,Independence Day
+14-Oct-2023,Mahalaya Amavasya
+23-Oct-2023,Ayudha Pooja
+24-Oct-2023,Vijayadashami
+12-Nov-2023,Deepavali
+25-Dec-2023,Christmas
