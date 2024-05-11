@@ -7,8 +7,7 @@
     class students(models.Model):
         name1=models.CharField(max_length=50)
         college1=models.CharField(max_length=100)
-        course1=models.CharField(max_length=30)
-        
+        course1=models.CharField(max_length=30) 
 <h4>Create new file forms.py</h4> 
 
     class inputform(forms.ModelForm):
