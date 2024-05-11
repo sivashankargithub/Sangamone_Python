@@ -29,7 +29,7 @@
     {% csrf_token %} {{form.as_p}} Submit
     {{param1}}
 
-<h5>python manage.py makemigrations</h5>
+<h4>python manage.py makemigrations</h4>
 
     python manage.py migrate Check if http://127.0.0.1:8080/app1 is working
 
@@ -43,10 +43,10 @@
 
 Make changes to admin.py
 
-from .models import students admin.site.register(students)
+    from .models import students admin.site.register(students)
 
 We can also check by clicking on db.sqlite
-Procedure to create a simple Django Project
+<h4>Procedure to create a simple Django Project</h4>
 
 PHASE1: Project creation Step1 : In Terminal
 
