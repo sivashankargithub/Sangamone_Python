@@ -2,9 +2,7 @@
 <h2> Create django project django12 </h2>
 <h2>Create django app app1</h2>
 <h2>Ensure app1 is working</h2>
-Make changes to models.py class students(models.Model): name1=models.CharField(max_length=50)
-
-
+Make changes to models.py class students(models.Model): name1=models.CharField(max_length=50)<br />
 college1=models.CharField(max_length=100) course1=models.CharField(max_length=30)
 Create new file forms.py class inputform(forms.ModelForm): class Meta: model=students fields=['name1','college1','course1']
 
