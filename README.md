@@ -7,7 +7,15 @@
     college1=models.CharField(max_length=100) course1=models.CharField(max_length=30)
 <br>  Create new file forms.py class inputform(forms.ModelForm): class Meta: model=students fields=['name1','college1','course1']<br />
 <h4>Make changes to views.py</h4>
-  from .forms import inputform def home(request): if request.method=="POST": form1=inputform(request.POST) if form1.is_valid(): form1.save() return render(request,'app1/index.html',{'form':form1,'param1':"Success"}) else: form1=inputform() return render(request,'app1/index.html',{'form':form1})
+
+    from .forms import inputform def home(request):
+        if request.method=="POST": 
+            form1=inputform(request.POST)
+        if form1.is_valid():
+            form1.save()
+            return render(request,'app1/index.html',{'form':form1,'param1':"Success"})
+        else: form1=inputform()
+            return render(request,'app1/index.html',{'form':form1})
 
 <h4>Make changes to index.html</h4>
 
