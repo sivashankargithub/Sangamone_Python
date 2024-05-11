@@ -3,15 +3,18 @@
 <h4>Create django app app1</h4>
 <h4>Ensure app1 is working</h4>
 <h4>Make changes to models.py</h4>
+
     class students(models.Model):
         name1=models.CharField(max_length=50)
         college1=models.CharField(max_length=100)
         course1=models.CharField(max_length=30) 
 <h4>Create new file forms.py</h4> 
+    
     class inputform(forms.ModelForm):
         class Meta: model=students
         fields=['name1','college1','course1']
 <h4>Make changes to views.py</h4>
+
     from .forms import inputform def home(request):
         if request.method=="POST": 
             form1=inputform(request.POST)
@@ -20,13 +23,12 @@
             return render(request,'app1/index.html',{'form':form1,'param1':"Success"})
         else: form1=inputform()
             return render(request,'app1/index.html',{'form':form1})
-
 <h4>Make changes to index.html</h4>
 
-{% csrf_token %} {{form.as_p}} Submit
-{{param1}}
+    {% csrf_token %} {{form.as_p}} Submit
+    {{param1}}
 
-python manage.py makemigrations
+<h5>python manage.py makemigrations</h5>
 
 python manage.py migrate Check if http://127.0.0.1:8080/app1 is working
 
