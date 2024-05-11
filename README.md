@@ -37,10 +37,8 @@
 
     http://127.0.0.1:8080/admin
 
-<h4>Make changes to models.py</h4> 
+<h4>Make changes to models.py so that the object name is the same as the student's name</h4> 
 
-<p1>so that the object name is the same as the student's name</p1>
-    
     def str(self): return self.name1
 
 Make changes to admin.py
