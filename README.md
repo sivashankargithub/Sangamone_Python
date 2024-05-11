@@ -9,9 +9,12 @@
         college1=models.CharField(max_length=100)
         course1=models.CharField(max_length=30)
         
-<br>  Create new file forms.py class inputform(forms.ModelForm): class Meta: model=students fields=['name1','college1','course1']<br />
-<h4>Make changes to views.py</h4>
+<h4>Create new file forms.py</h4> 
 
+    class inputform(forms.ModelForm):
+    class Meta: model=students
+    fields=['name1','college1','course1']
+<h4>Make changes to views.py</h4>
     from .forms import inputform def home(request):
         if request.method=="POST": 
             form1=inputform(request.POST)
