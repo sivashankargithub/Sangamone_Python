@@ -11,8 +11,9 @@
 <h4>Create new file forms.py</h4> 
     
     class inputform(forms.ModelForm):
-        class Meta: model=students
-        fields=['name1','college1','course1']
+        class Meta:
+            model=students
+            fields=['name1','college1','course1']
 <h4>Make changes to views.py</h4>
 
     from .forms import inputform def home(request):
@@ -30,9 +31,9 @@
 
 <h5>python manage.py makemigrations</h5>
 
-python manage.py migrate Check if http://127.0.0.1:8080/app1 is working
+    python manage.py migrate Check if http://127.0.0.1:8080/app1 is working
 
-python manage.py createsuperuser
+    python manage.py createsuperuser
 
 http://127.0.0.1:8080/admin
 
