@@ -74,7 +74,9 @@ Step4 :
 
      python manage.py runserver
      
-     Run the Django development server If everything is okay with your Project, Django will start running the server at localhost port 8000 (127.0. 0.1:8000), and then you have to navigate to that link in your browser.
+     Run the Django development server If everything is okay with your Project, 
+     
+     Django will start running the server at localhost port 8000 (127.0. 0.1:8000), and then you have to navigate to that link in your browser.
 
      If you are doing multiple apps in same project you might get Page Not Found Error, You can ignore it.
 
@@ -94,29 +96,33 @@ Step6:
 
 Step7 : Go to django1/settings.py add
 
-INSTALLED_APPS = [...,"factorial1", ]
+     INSTALLED_APPS = [...,"factorial1", ]
 
 Step8 : Go to factorial1/views.py
 
-def home(request): return render(request,'factorial1/index.html',{'param1':"hello world"})
+     def home(request):
+          return render(request,'factorial1/index.html',{'param1':"hello world"})
 
 Step9 : Create urls.py in factorial1 and add
 
-from django.urls import path from factorial1.views import home urlpatterns = [path('', home),]
-
+     from django.urls import path from factorial1.views
+     import home
+     urlpatterns = [path('', home),]
 Step 10a : In django1/urls.py, add
 
-django.urls import include
+     django.urls import include
 
 Step 10b: Inside urlpatterns add
 
-path("factorial1" ,include("factorial1.urls")),
+     path("factorial1" ,include("factorial1.urls")),
 
 Step11 : In Terminal run,
 
-python manage.py runserver
+     python manage.py runserver
 
-You will get output as Hello World hello world In Browser, We should make changes in the server at localhost port 8000 i.e; 127.0.0.1:8000/factorial1
+     You will get output as Hello World hello world In Browser, 
+     
+     We should make changes in the server at localhost port 8000 i.e; 127.0.0.1:8000/factorial1
 
 PHASE3: Logic to be implemented in views.py Step12 : Sample program to show factorial of number 5
 
