@@ -54,9 +54,11 @@ We can also check by clicking on db.sqlite
 
 Procedure to create a simple Django Project
 
-    PHASE1: Project creation Step1 : In Terminal
+    PHASE1: Project creation 
     
-django-admin startproject django1 It is used to create a project with folder name and project name as django1
+Step1 : 
+
+In Terminal django-admin startproject django1 It is used to create a project with folder name and project name as django1
 
 Step2 :
 
