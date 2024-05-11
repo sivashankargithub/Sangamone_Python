@@ -1,6 +1,6 @@
 <h1 align="center">Django Steps to create a Form using Model such that the database tables are created in Django's SQLite</h1>
 
-Create django project django12
+<h2> Create django project django12 </h2>
 
 Create django app app1
 
