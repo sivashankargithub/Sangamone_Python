@@ -3,8 +3,12 @@
 <h4>Create django app app1</h4>
 <h4>Ensure app1 is working</h4>
 <h4>Make changes to models.py</h4>
-    class students(models.Model): name1=models.CharField(max_length=50)
-    college1=models.CharField(max_length=100) course1=models.CharField(max_length=30)
+
+    class students(models.Model):
+        name1=models.CharField(max_length=50)
+        college1=models.CharField(max_length=100)
+        course1=models.CharField(max_length=30)
+        
 <br>  Create new file forms.py class inputform(forms.ModelForm): class Meta: model=students fields=['name1','college1','course1']<br />
 <h4>Make changes to views.py</h4>
 
