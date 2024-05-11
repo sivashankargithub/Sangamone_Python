@@ -134,28 +134,29 @@ Step12 : Sample program to show factorial of number 5
 
 Also make changes in index.html
 
-     
-Hello World
+     Hello World
+
+     The factorial of {{param1}} is {{param2}}
+
+     We should get output as The factorial of 5 is 120
 
      
-The factorial of {{param1}} is {{param2}}
+<h4>PHASE4: add forms to take input from the user We can modify the code using forms</h4>
+Step13 : create forms.py in the factorial1 folder
 
-     
-We should get output as The factorial of 5 is 120
-
-     
-PHASE4: add forms to take input from the user We can modify the code using forms Step13 : create forms.py in the factorial1 folder
-
-from django import forms class inputform(forms.Form): name=forms.CharField(max_length=10) input=forms.IntegerField(min_value=1,max_value=5,label="Enter number")
+     from django import forms class inputform(forms.Form):
+     name=forms.CharField(max_length=10) input=forms.IntegerField(min_value=1,max_value=5,label="Enter number")
 
 Step14 : in index.html
 
-Factorial Program
-{% csrf_token %} {{form.as_p}} find factorial
-{% if param1 %}
-<h2>Factorial of {{param2}} is {{param1}}</h2>
-{% endif %}
-we can use (p, ul, table) where p-paragraph, ul-unordered list, table-table
+     #Factorial Program
+     
+     {% csrf_token %} {{form.as_p}} find factorial
+     {% if param1 %}
+     <h2>Factorial of {{param2}} is {{param1}}</h2>
+     {% endif %}
+     
+     we can use (p, ul, table) where p-paragraph, ul-unordered list, table-table
 Step15 : in factorial/views.py,
 
 from django.shortcuts import render from factorial1.forms import inputform def home(request): if request.method=="POST": form1=inputform(request.POST) if form1.is_valid(): data=form1.cleaned_data n1=data.get("input") result=fact(n1) return render(request,"factorial1/index.html",{'param1':result, 'param2':n1, 'form':form1}) else: form1=inputform()
