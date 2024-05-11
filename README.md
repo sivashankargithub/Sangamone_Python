@@ -56,7 +56,6 @@ Procedure to create a simple Django Project
 
     
 <h4>PHASE1: Project creation</h4> 
-    
 Step1 : 
 
      In Terminal django-admin startproject django1 It is used to create a project with folder name and project name as django1
