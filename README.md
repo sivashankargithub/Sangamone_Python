@@ -4,7 +4,6 @@
 Create django project django12
    
 Create django app app1
-
      
 Ensure app1 is working
 
