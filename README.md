@@ -1,20 +1,22 @@
 <h1 align="center">Django Steps to create a Form using Model such that the database tables are created in Django's SQLite</h1>
-<h4> Create django project django12 </h4>
-<h4>Create django app app1</h4>
-<h4>Ensure app1 is working</h4>
-<h4>Make changes to models.py</h4>
+    
+    
+Create django project django12
+Create django app app1
+Ensure app1 is working
+Make changes to models.py
 
     class students(models.Model):
         name1=models.CharField(max_length=50)
         college1=models.CharField(max_length=100)
         course1=models.CharField(max_length=30) 
-<h4>Create new file forms.py</h4> 
+Create new file forms.py 
     
     class inputform(forms.ModelForm):
         class Meta:
             model=students
             fields=['name1','college1','course1']
-<h4>Make changes to views.py</h4>
+Make changes to views.py
 
     from .forms import inputform def home(request):
         if request.method=="POST": 
@@ -24,12 +26,12 @@
             return render(request,'app1/index.html',{'form':form1,'param1':"Success"})
         else: form1=inputform()
             return render(request,'app1/index.html',{'form':form1})
-<h4>Make changes to index.html</h4>
+Make changes to index.html
 
     {% csrf_token %} {{form.as_p}} Submit
     {{param1}}
 
-<h4>python manage.py makemigrations</h4>
+python manage.py makemigrations
 
     python manage.py migrate Check if http://127.0.0.1:8080/app1 is working
 
@@ -37,7 +39,7 @@
 
     http://127.0.0.1:8080/admin
 
-<h4>Make changes to models.py so that the object name is the same as the student's name</h4> 
+Make changes to models.py so that the object name is the same as the student's name 
 
     def str(self): return self.name1
 
@@ -46,9 +48,10 @@ Make changes to admin.py
     from .models import students admin.site.register(students)
 
 We can also check by clicking on db.sqlite
-<h4>Procedure to create a simple Django Project</h4>
 
-PHASE1: Project creation Step1 : In Terminal
+Procedure to create a simple Django Project
+
+    PHASE1: Project creation Step1 : In Terminal
 
 django-admin startproject django1 It is used to create a project with folder name and project name as django1
 
