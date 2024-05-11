@@ -54,7 +54,8 @@ We can also check by clicking on db.sqlite
 
 Procedure to create a simple Django Project
 
-    PHASE1: Project creation 
+    
+<h4>PHASE1: Project creation</h4> 
     
 Step1 : 
 
