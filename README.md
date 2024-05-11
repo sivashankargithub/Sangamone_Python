@@ -58,31 +58,39 @@ Procedure to create a simple Django Project
     
 Step1 : 
 
-In Terminal django-admin startproject django1 It is used to create a project with folder name and project name as django1
+     In Terminal django-admin startproject django1 It is used to create a project with folder name and project name as django1
 
 Step2 :
 
-cd django1 We changed the current dirctory to django1
+     cd django1 We changed the current dirctory to django1
 
 Step3 :
 
-django-admin startapp factorial1
-We created an app with app name as factorial1
+     django-admin startapp factorial1
+     
+     We created an app with app name as factorial1
 
 Step4 :
 
-python manage.py runserver
-Run the Django development server If everything is okay with your Project, Django will start running the server at localhost port 8000 (127.0. 0.1:8000), and then you have to navigate to that link in your browser.
+     python manage.py runserver
+     
+     Run the Django development server If everything is okay with your Project, Django will start running the server at localhost port 8000 (127.0. 0.1:8000), and then you have to navigate to that link in your browser.
 
-If you are doing multiple apps in same project you might get Page Not Found Error, You can ignore it.
+     If you are doing multiple apps in same project you might get Page Not Found Error, You can ignore it.
 
-PHASE2: Creating urls Step5 : 5a) In factorial1, create folder templates 5b) In factorial1/templates, create folder factorial1 5c) In factorial1/templates/factorial1, create file index.html
+PHASE2: Creating urls Step5 :
+     
+     5a) In factorial1, create folder templates 
+     
+     5b) In factorial1/templates, create folder factorial1 5c) In factorial1/templates/factorial1, create file index.html
 
-Step6: In index.html write a program which include 'Hello World' and {{param1}}
+Step6: 
 
-Hello World
+     In index.html write a program which include 'Hello World' and {{param1}}
 
-{{param1}}
+     Hello World
+
+     {{param1}}
 
 Step7 : Go to django1/settings.py add
 
