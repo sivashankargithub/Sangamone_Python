@@ -2,7 +2,7 @@
 
 <h2> Create django project django12 </h2>
 
-Create django app app1
+<h2>Create django app app1</h2>
 
 Ensure app1 is working
 
