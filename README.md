@@ -3,7 +3,6 @@
 <h4>Create django app app1</h4>
 <h4>Ensure app1 is working</h4>
 <h4>Make changes to models.py</h4>
-
     class students(models.Model):
         name1=models.CharField(max_length=50)
         college1=models.CharField(max_length=100)
