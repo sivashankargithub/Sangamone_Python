@@ -80,7 +80,8 @@ Step4 :
 
      If you are doing multiple apps in same project you might get Page Not Found Error, You can ignore it.
 
-PHASE2: Creating urls Step5 :
+<h4>PHASE2: Creating urls</h4>
+Step5 :
      
      5a) In factorial1, create folder templates 
      
@@ -124,17 +125,25 @@ Step11 : In Terminal run,
      
      We should make changes in the server at localhost port 8000 i.e; 127.0.0.1:8000/factorial1
 
-PHASE3: Logic to be implemented in views.py Step12 : Sample program to show factorial of number 5
+<h4>PHASE3: Logic to be implemented in views.py</h4> 
+Step12 : Sample program to show factorial of number 5
 
-from django.shortcuts import render def home(request): result=1 n1=5 for i in range(1,n1+1,1): result=result*i return render(request,'factorial1/index.html',{'param1':result,'param2':n1})
+     from django.shortcuts import render def home(request):
+          result=1 n1=5 for i in range(1,n1+1,1):
+               result=result*i return render(request,'factorial1/index.html',{'param1':result,'param2':n1})
 
 Also make changes in index.html
 
+     
 Hello World
 
+     
 The factorial of {{param1}} is {{param2}}
 
+     
 We should get output as The factorial of 5 is 120
+
+     
 PHASE4: add forms to take input from the user We can modify the code using forms Step13 : create forms.py in the factorial1 folder
 
 from django import forms class inputform(forms.Form): name=forms.CharField(max_length=10) input=forms.IntegerField(min_value=1,max_value=5,label="Enter number")
